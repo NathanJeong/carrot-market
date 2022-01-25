@@ -17,8 +17,10 @@ const Home: NextPage = () => {
           <span>Total</span>
           <span>$970</span>
         </div>
-        <div className="mt-5 bg-sky-500 text-white text-center p-2 rounded-xl w-1/2 mx-auto">
-          Check Out
+        <div className="flex justify-center">
+          <button className="mt-5 bg-sky-500 opacity-50 text-white text-center p-2 rounded-xl w-1/2 mx-auto hover:bg-red-400 hover:opacity-100 active:bg-orange-600">
+            Check Out
+          </button>
         </div>
       </div>
       <div className="bg-white overflow-hidden rounded-3xl shadow-xl">
@@ -45,21 +47,21 @@ const Home: NextPage = () => {
       </div>
       <div className="bg-white p-10 rounded-3xl shadow-xl">
         <div className="flex mb-5 justify-between items-center">
-          <span>🔙</span>
+          <span> 🔙 </span>
           <div className="space-x-3">
             <span>⭐️ 4.9</span>
             <span className="p-2 rounded-md shadow-2xl">❤️</span>
           </div>
         </div>
-        <div className="bg-zinc-400 h-72 mb-5 shadow-2xl" />
+        <div className="bg-zinc-400 h-72 mb-5 shadow-2xl rounded-lg" />
         <div className="flex flex-col">
           <span className="font-medium mb-1 text-xl">Swoon Lounge</span>
           <span className="text-xs text-gray-500">Chair</span>
           <div className="mt-3 mb-5 flex justify-between items-center">
-            <div className="flex items-center">
-              <input type="radio" />
-              <input type="radio" />
-              <input type="radio" />
+            <div className="space-x-2">
+              <button className="w-5 h-5 rounded-full bg-yellow-300"></button>
+              <button className="w-5 h-5 rounded-full bg-sky-800"></button>
+              <button className="w-5 h-5 rounded-full bg-teal-300"></button>
             </div>
             <div className="flex items-center space-x-5">
               <button className="rounded-lg bg-blue-200 flex justify-center items-center aspect-square w-8 text-xl text-gray-500">
