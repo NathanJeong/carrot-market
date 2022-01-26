@@ -114,6 +114,14 @@ const Home: NextPage = () => {
         />
         <input type="submit" value="Submit" className="p-1 bg-white" />
       </form>
+      <details className="select-none open:text-white open:bg-indigo-300">
+        <summary className="cursor-pointer">What is my favorite food?</summary>
+        <span>닭갈비</span>
+      </details>
+      <input
+        type="file"
+        className="file:cursor-wait file:hover:bg-white file:hover:text-purple-400 file:hover:border-purple-400 file:hover:border transition-colors file:border-0 file:rounded-lg file:bg-indigo-300 file:text-white file:px-3"
+      />
     </div>
   );
 };
