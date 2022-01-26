@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   };
   return (
     <div className="bg-slate-400 py-20 px-20 flex flex-col space-y-5 min-h-screen">
-      <div className="bg-white p-6 rounded-3xl shadow-xl">
+      <div className="bg-white sm:bg-red-400 md:bg-sky-900 lg:bg-indigo-300 xl:bg-teal-200 2xl:bg-yellow-100 p-6 rounded-3xl shadow-xl">
         <span className="font-bold text-2xl">Selet Item</span>
         <ul>
           {[1, 2, 3, 4, 5, 6].map((i) => (
