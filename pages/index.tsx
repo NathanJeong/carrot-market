@@ -1,6 +1,9 @@
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
+  const onSubmit = (event: any) => {
+    event.preventDefault();
+  };
   return (
     <div className="bg-slate-400 py-20 px-20 flex flex-col space-y-5 min-h-screen">
       <div className="bg-white p-6 rounded-3xl shadow-xl">
@@ -29,7 +32,7 @@ const Home: NextPage = () => {
           </button>
         </div>
       </div>
-      <div className="bg-white overflow-hidden rounded-3xl shadow-xl">
+      <div className="bg-white overflow-hidden rounded-3xl shadow-xl group">
         <div className="bg-blue-500 p-6 pb-14">
           <span className="text-white text-2xl">Profile</span>
         </div>
@@ -39,7 +42,7 @@ const Home: NextPage = () => {
               <span className="text-sm text-gray-500">Orders</span>
               <span className="font-medium">340</span>
             </div>
-            <div className="h-24 w-24 bg-red-400 rounded-full" />
+            <div className="h-24 w-24 bg-red-400 rounded-full group-hover:scale-110 transition-transform" />
             <div className=" flex flex-col items-center">
               <span className="text-sm text-gray-500">Spent</span>
               <span className="font-medium">$2,310</span>
@@ -87,6 +90,30 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <form
+        onSubmit={onSubmit}
+        className="flex flex-col space-y-2 bg-sky-900 p-5 focus-within:bg-slate-700 transition-colors">
+        <input
+          type="text"
+          placeholder="Username"
+          minLength={6}
+          required
+          className="p-1 peer invalid:border-2 border-red-700"
+        />
+        <span className="hidden peer-invalid:block peer-invalid:text-red-500">
+          Username is invalid
+        </span>
+        <span className="hidden peer-valid:block peer-valid:text-teal-500">
+          Username is Valid
+        </span>
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          className="p-1 required:border-2 border-red-700 valid:border-0"
+        />
+        <input type="submit" value="Submit" className="p-1 bg-white" />
+      </form>
     </div>
   );
 };
