@@ -5,8 +5,8 @@ const Home: NextPage = () => {
     event.preventDefault();
   };
   return (
-    <div className="bg-slate-400 xl:place-content-center py-20 px-20 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen">
-      <div className="bg-white  flex flex-col justify-between p-6 rounded-3xl shadow-xl">
+    <div className="bg-slate-400 dark xl:place-content-center py-20 px-20 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen">
+      <div className="bg-white dark:bg-slate-800 flex flex-col justify-between p-6 rounded-3xl shadow-xl">
         <span className="font-bold text-2xl">Selet Item</span>
         <div className="flex justify-between my-2 odd:bg-slate-100 even:bg-sky-100">
           <span className="text-gray-500">Grey Chair</span>
